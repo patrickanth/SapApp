@@ -1,0 +1,131 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:core="sap.ui.core" >
+    
+	<VBox id="_IDGenVBox1" class="sapUiSmallMargin">
+		<f:Form id="FormDisplay354"
+			editable="false">
+			<f:title>
+				<core:Title id="_IDGenTitle1" text="FORM DEEP CONSULTING" />
+			</f:title>
+			<f:layout>
+				<f:ResponsiveGridLayout id="_IDGenResponsiveGridLayout1"
+					labelSpanXL="3"
+					labelSpanL="3"
+					labelSpanM="3"
+					labelSpanS="12"
+					adjustLabelSpan="false"
+					emptySpanXL="4"
+					emptySpanL="4"
+					emptySpanM="4"
+					emptySpanS="0"
+					columnsXL="1"
+					columnsL="1"
+					columnsM="1"
+					singleContainerFullSize="false" />
+			</f:layout>
+			<f:formContainers>
+				<f:FormContainer id="_IDGenFormContainer1">
+					<f:formElements>
+						<f:FormElement id="_cognome" label="Cognome" >
+							<f:fields>
+								<Input id="_cognomeInput" type="Text" maxLength="40"/>
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement id="_nome" label="Nome">
+							<f:fields>
+								<Input id="_nomeInput" type="Text" maxLength="30"/>
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement id="_matricola" label="Matricola">
+							<f:fields>
+								<Input id="_matricolaInput"  type="Text" maxLength="20"/>
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement id="_regione" label="Regione" >
+							<f:fields>
+                            <InputListItem id="_regioneInput">
+                                    <Select id="_selectRegione" textAlign="Left">
+                                        <core:Item id="_A" key="AB" text="Abruzzo" />
+                                        <core:Item id="_B" key="PG" text="Basilicata" />
+                                        <core:Item id="_C" key="NO" text="Calabria" />
+                                        <core:Item id="_CA" key="NZ" text="Campania" />
+                                        <core:Item id="_E" key="NL" text="Emilia Romagna" />
+                                        <core:Item id="_F" key="AB" text="Friuli Venezia Giulia" />
+                                        <core:Item id="_L" key="PG" text="Lazio" />
+                                        <core:Item id="_LI" key="NO" text="Liguria" />
+                                        <core:Item id="_LO" key="NZ" text="Lombardia" />
+                                        <core:Item id="_M" key="NL" text="Marche" />
+                                        <core:Item id="_MO" key="NZ" text="Molise" />
+                                        <core:Item id="_P" key="NL" text="Piemonte" />
+                                        <core:Item id="_PU" key="AB" text="Puglia" />
+                                        <core:Item id="_S" key="PG" text="Sardegna" />
+                                        <core:Item id="_SI" key="NO" text="Sicilia" />
+                                        <core:Item id="_T" key="NZ" text="Toscana" />
+                                        <core:Item id="_TR" key="NL" text="Trentino Alto Adige" />
+                                        <core:Item id="_U" key="NZ" text="Umbria" />
+                                        <core:Item id="_V" key="NL" text="Val d'Aosta" />
+                                        <core:Item id="_VE" key="AB" text="Veneto" />
+                                    </Select>
+                            </InputListItem>
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement id="_email" label="Email" >
+							<f:fields>
+								<Input id="_emailInput"  type="Text" maxLength="30"/>
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement id="_telefono" label="Telefono" >
+							<f:fields>
+								<Input id="_telefonoInput"  type="Text" maxLength="15" />
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement id="_richieste" label="Richieste Particolari" >
+							<f:fields>
+								<Input id="_richiesteInput"/>
+							</f:fields>
+						</f:FormElement>	
+					</f:formElements>
+				</f:FormContainer>
+			</f:formContainers>
+		</f:Form>
+        		<Label id="_menuB" />
+		<MenuButton id="_menuB2" text="Scegliere Opzione" defaultAction="onDefaultAction" useDefaultActionOnly="true" menuPosition="RightBottom">
+			<menu>
+				<Menu id="_IDGenMenu1" itemSelected="onMenuAction">
+					<items>
+						
+						<MenuItem id="_ID2" text="Verifica"/>
+						<MenuItem id="_ID3" text="Reset"  />
+                        <MenuItem id="_ID1" text="Edit"  />
+					</items>
+				</Menu>
+			</menu>
+		</MenuButton>
+		
+		          <Toolbar
+                id="otbFooter">
+
+                <Button id="_IDGenButton1"
+                    icon="sap-icon://alert"
+                    text="{= ${message>/}.length }"
+                    visible="{= ${message>/}.length > 0 }"
+                    type="Emphasized"
+                    press="onMessagePopoverPress" />
+
+                <ToolbarSpacer id="_IDGenToolbarSpacer1"/>
+
+                <Button id="_IDGenButton2" type="Accept" text="Success" press="onSuccessPress"/>
+                <Button id="_IDGenButton3" type="Reject" text="Error" press="onErrorPress"/>
+                <Button id="_IDGenButton4" text="Warning" press="onWarningPress"/>
+                <Button id="_IDGenButton5" text="Info" press="onInfoPress"/>
+                <Button id="_IDGenButton6" text="ValueState" press="onValueStatePress"/>
+                <Button id="_IDGenButton7" text="Clear" press="onClearPress"/>
+
+            </Toolbar>
+        
+	</VBox>
+
+</core:FragmentDefinition>
