@@ -1,4 +1,4 @@
-<core:FragmentDefinition
+<mvc:View xmlns:mvc="sap.ui.core.mvc" displayBlock="true" controllerName="nameSpaceProva.project1.controller.View1"
 	xmlns="sap.m"
 	xmlns:l="sap.ui.layout"
 	xmlns:f="sap.ui.layout.form"
@@ -31,23 +31,24 @@
 					<f:formElements>
 						<f:FormElement id="_cognome" label="Cognome" >
 							<f:fields>
-								<Input id="_cognomeInput" type="Text" maxLength="40"/>
+								<Input id="_cognomeInput" type="Text" maxLength="40" submit="onResetButton"/>
 							</f:fields>
 						</f:FormElement>
 						<f:FormElement id="_nome" label="Nome">
 							<f:fields>
-								<Input id="_nomeInput" type="Text" maxLength="30"/>
+								<Input id="_nomeInput" type="Text" maxLength="30" submit="onResetButton"/>
 							</f:fields>
 						</f:FormElement>
 						<f:FormElement id="_matricola" label="Matricola">
 							<f:fields>
-								<Input id="_matricolaInput"  type="Text" maxLength="20"/>
+								<Input id="_matricolaInput"  type="Text" maxLength="20" />
 							</f:fields>
 						</f:FormElement>
 						<f:FormElement id="_regione" label="Regione" >
 							<f:fields>
                             <InputListItem id="_regioneInput">
-                                    <Select id="_selectRegione" textAlign="Left">
+                                    <Select id="_selectRegione" textAlign="Left" selectedKey="">
+										<core:Item id="_N" key="N" text="Nessuna Regione Selezionata" />
                                         <core:Item id="_A" key="AB" text="Abruzzo" />
                                         <core:Item id="_B" key="PG" text="Basilicata" />
                                         <core:Item id="_C" key="NO" text="Calabria" />
@@ -98,7 +99,7 @@
 					<items>
 						
 						<MenuItem id="_ID2" text="Verifica"/>
-						<MenuItem id="_ID3" text="Reset"  />
+						<MenuItem press="onResetButton" id="_ID3" text="Reset"  />
                         <MenuItem id="_ID1" text="Edit"  />
 					</items>
 				</Menu>
@@ -117,7 +118,7 @@
 
                 <ToolbarSpacer id="_IDGenToolbarSpacer1"/>
 
-                <Button id="_IDGenButton2" type="Accept" text="Success" press="onSuccessPress"/>
+                <Button id="_IDGenButton2" type="Accept" text="Success" press="onResetButton"/>
                 <Button id="_IDGenButton3" type="Reject" text="Error" press="onErrorPress"/>
                 <Button id="_IDGenButton4" text="Warning" press="onWarningPress"/>
                 <Button id="_IDGenButton5" text="Info" press="onInfoPress"/>
@@ -127,5 +128,4 @@
             </Toolbar>
         
 	</VBox>
-
-</core:FragmentDefinition>
+	</mvc:View>

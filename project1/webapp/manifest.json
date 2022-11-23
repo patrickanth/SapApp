@@ -12,8 +12,8 @@
     "resources": "resources.json",
     "sourceTemplate": {
       "id": "@sap/generator-fiori:basic",
-      "version": "1.8.1",
-      "toolsId": "218f7464-ec2d-44bd-bf2f-4bcae597c4f1"
+      "version": "1.8.1",      
+	  "toolsId": "218f7464-ec2d-44bd-bf2f-4bcae597c4f1"
     },
     "dataSources": {
       "mainService": {
@@ -44,7 +44,7 @@
     }
   },
   "sap.ui5": {
-    "flexEnabled": true,
+    "flexEnabled": false,
     "dependencies": {
       "minUI5Version": "1.71.50",
       "libs": {
@@ -55,10 +55,7 @@
         "sap.ui.comp": {},
         "sap.ui.generic.app": {},
         "sap.ui.table": {},
-        "sap.ushell": {},
-        "libs": {
-          "sap.ui.unified": {}
-        }
+        "sap.ushell": {}
       }
     },
     "contentDensities": {
@@ -120,22 +117,5 @@
       "async": true,
       "id": "App"
     }
-  },
-	"dependencies": {
-			"libs": {
-				"sap.m": {}
-			}
-		},
-      "config": {
-        "sample": {
-          "stretch": true,
-          "files": [
-            "nameSpaceProva.project1.controller.App",
-            "MessagePopover.fragment.xml",
-            "View.view.xml",
-            "manifest.json"
-          ]
-        }
-	}
+  }
 }
-
